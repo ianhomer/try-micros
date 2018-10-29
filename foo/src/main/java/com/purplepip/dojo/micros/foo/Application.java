@@ -18,10 +18,25 @@ package com.purplepip.dojo.micros.foo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration;
+import org.springframework.boot.autoconfigure.web.client.RestTemplateAutoConfiguration;
+import org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration;
+import org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration;
+import org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryAutoConfiguration;
+import org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
-@SpringBootApplication
+@Configuration
+@Import({
+  DispatcherServletAutoConfiguration.class,
+  HttpEncodingAutoConfiguration.class,
+  HttpMessageConvertersAutoConfiguration.class,
+  RestTemplateAutoConfiguration.class,
+  ServletWebServerFactoryAutoConfiguration.class,
+  WebMvcAutoConfiguration.class
+})
 @ComponentScan(value = "com.purplepip.dojo.micros.foo")
 @Slf4j
 public class Application implements CommandLineRunner {
