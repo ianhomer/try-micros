@@ -17,6 +17,7 @@ package com.purplepip.trial.micros;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
@@ -24,6 +25,10 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan("com.purplepip")
 @Slf4j
 public class Application implements CommandLineRunner {
+  public static void main(String[] args) {
+    SpringApplication.run(Application.class, args);
+  }
+
   public void run(String... args) {
     LOG.info("Starting service");
   }
