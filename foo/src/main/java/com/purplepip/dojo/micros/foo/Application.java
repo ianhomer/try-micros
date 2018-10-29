@@ -28,6 +28,10 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
+/*
+ * Experiment with explicit imports instead of convenience
+ * of SpringBootApplication
+ */
 @Configuration
 @Import({
   DispatcherServletAutoConfiguration.class,
