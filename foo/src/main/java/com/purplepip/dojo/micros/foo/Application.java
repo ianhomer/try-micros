@@ -22,7 +22,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan("com.purplepip")
+@ComponentScan(value = "com.purplepip.dojo.micros.foo")
 @Slf4j
 public class Application implements CommandLineRunner {
   public static void main(String[] args) {
