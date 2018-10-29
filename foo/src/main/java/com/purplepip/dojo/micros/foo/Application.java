@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package com.purplepip.trial.micros;
+package com.purplepip.dojo.micros.foo;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
