@@ -15,13 +15,13 @@
 
 package com.purplepip.dojo.micros.foo;
 
-import lombok.Data;
+import org.junit.jupiter.api.Test;
 
-@Data
-public class FooResponse {
-  private long value;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-  public FooResponse(long value) {
-    setValue(value);
+class FooTest {
+  @Test
+  void testFoo() {
+    assertEquals(3, new FooImpl().foo(1, 2).getValue());
   }
 }

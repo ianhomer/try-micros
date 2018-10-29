@@ -17,18 +17,10 @@ package com.purplepip.dojo.micros.foo;
 
 import com.purplepip.dojo.micros.foo.api.Foo;
 import com.purplepip.dojo.micros.foo.api.FooResponse;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.ResponseBody;
 
-@Controller
-public class FooController implements Foo {
-  private Foo foo = new FooImpl();
-
-  @GetMapping("/foo/{x}/{y}")
-  @ResponseBody
-  public FooResponse foo(@PathVariable long x, @PathVariable long y) {
-    return foo.foo(x, y);
+public class FooImpl implements Foo {
+  @Override
+  public FooResponse foo(long x, long y) {
+    return new FooResponse(x + y);
   }
 }

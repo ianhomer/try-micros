@@ -13,8 +13,15 @@
  * limitations under the License.
  */
 
-package com.purplepip.dojo.micros.foo;
+package com.purplepip.dojo.micros.foo.api;
 
-public interface Foo {
-  FooResponse foo(long x, long y);
+import lombok.Data;
+
+@Data
+public class FooResponse {
+  private long value;
+
+  public FooResponse(long value) {
+    setValue(value);
+  }
 }

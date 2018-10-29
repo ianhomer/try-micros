@@ -10,7 +10,7 @@
 
   <modelVersion>4.0.0</modelVersion>
   <artifactId>foo</artifactId>
-  <name>Try Service</name>
+  <name>foo</name>
 
   <properties>
     <jacoco.covered.ratio>0.60</jacoco.covered.ratio>

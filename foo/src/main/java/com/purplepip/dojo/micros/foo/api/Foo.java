@@ -13,22 +13,8 @@
  * limitations under the License.
  */
 
-package com.purplepip.dojo.micros.foo;
+package com.purplepip.dojo.micros.foo.api;
 
-import com.purplepip.dojo.micros.foo.api.Foo;
-import com.purplepip.dojo.micros.foo.api.FooResponse;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-@Controller
-public class FooController implements Foo {
-  private Foo foo = new FooImpl();
-
-  @GetMapping("/foo/{x}/{y}")
-  @ResponseBody
-  public FooResponse foo(@PathVariable long x, @PathVariable long y) {
-    return foo.foo(x, y);
-  }
+public interface Foo {
+  FooResponse foo(long x, long y);
 }
