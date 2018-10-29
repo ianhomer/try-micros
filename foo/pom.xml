@@ -15,7 +15,7 @@
   <properties>
     <jacoco.covered.ratio>0.60</jacoco.covered.ratio>
   </properties>
-  
+
   <dependencyManagement>
     <dependencies>
       <dependency>
