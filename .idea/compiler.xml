@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="my-core" />
+        <module name="config" />
+        <module name="service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="my-core" target="10" />
+      <module name="config" target="10" />
+      <module name="service" target="10" />
       <module name="try-micros" target="10" />
     </bytecodeTargetLevel>
   </component>

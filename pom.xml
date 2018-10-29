@@ -7,14 +7,32 @@
     <version>1.0.6</version>
   </parent>
 
+  <groupId>com.purplepip.trial.micros</groupId>
   <artifactId>try-micros</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <name>try-micros</name>
   <packaging>pom</packaging>
 
   <modules>
-    <module>my-core</module>
+    <module>config</module>
+    <module>service</module>
   </modules>
+
+  <properties>
+    <spring.cloud.version>Finchley.SR1</spring.cloud.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring.cloud.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <build>
     <plugins>

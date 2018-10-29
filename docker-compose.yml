@@ -1,0 +1,12 @@
+version: '3'
+services:
+  config:
+    build: ./config
+    container_name : config
+    ports:
+    - "8888:8888"
+  my-service:
+    build: ./my-service
+    container_name : my-service
+    ports:
+    - "8080:8080"
