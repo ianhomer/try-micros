@@ -6,9 +6,9 @@
     </encoder>
   </appender>
 
-  <logger name="com.purplepip" level="INFO"/>
+  <logger name="com.purplepip" level="DEBUG"/>
 
-  <root level="WARN">
+  <root level="DEBUG">
     <appender-ref ref="STDOUT"/>
   </root>
 </configuration>

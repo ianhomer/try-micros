@@ -15,9 +15,9 @@
 
 package com.purplepip.dojo.micros.foo;
 
-import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
 
 class FooTest {
   @Test
